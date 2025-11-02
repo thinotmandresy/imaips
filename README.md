@@ -35,10 +35,16 @@ This is a UHC Plugin (UPL) made specifically for the Improvement Mod in _Age of 
 
 ```cpp
 // Write to shared storage
+bool aiSPSSetBool(string key, bool value);
 bool aiSPSSetInt(string key, int value);
+bool aiSPSSetFloat(string key, float value);
+bool aiSPSSetString(string key, string value);
 
 // Read from shared storage
+bool aiSPSGetBool(string key);
 int aiSPSGetInt(string key);
+float aiSPSGetFloat(string key);
+string aiSPSGetString(string key);
 ```
 
 ## 3. Installation
@@ -49,7 +55,7 @@ This repository is mainly for development purposes.
 ## 4. TODO List
 
 - [ ] **Per-AI owned storage** (`aiOPSSetInt`, `aiOPSGetInt`, etc.)
-- [ ] **Support for all (non-vector) XS data types**
+- [x] **Support for all (non-vector) XS data types**
 - [ ] **Safety checks**
 - [ ] **Delete/clear functions** (`aiSPSClear()`, `aiSPSRemoveKey()`)<sup>1</sup>
 
